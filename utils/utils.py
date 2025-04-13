@@ -1,9 +1,5 @@
-"""
-Utility functions for I-JEPA Self-Supervised Learning
-"""
 import os
 import sys
-import math
 import torchvision.transforms as transforms
 from torch.utils.data import DataLoader
 import yaml
