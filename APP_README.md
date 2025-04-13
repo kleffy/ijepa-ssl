@@ -32,9 +32,8 @@ streamlit run app.py
 The app expects the following structure:
 
 ```
-project_root/
+ijepa-ssl/
 ├── app.py                   # Streamlit application code
-├── requirements-app.txt     # App dependencies
 ├── data/                    # Dataset directory
 │   ├── Chinchilla/          # Class directories with images
 │   ├── Hamster/
