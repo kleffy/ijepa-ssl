@@ -1,6 +1,5 @@
 # --- Dataset Class ---
 import os
-import logging
 import torch
 import torchvision.transforms as transforms
 from PIL import Image
