@@ -235,7 +235,15 @@ streamlit run app.py
 ```
 
 ### Screenshots
-[screenshot of the app in action]
+We did a quick test with random images from the internet.
+1. Chinchila image
+
+![Random Chinchila image from the internet](/output/c_test_01.jpg) ![Test Results](/output/classification_result.png)
+
+2. Rabbit image
+
+![Random Rabbit image from the internet](/output/rabbit_01.jpg) ![Test Results](/output/classification_result_rabbit.png)
+
 
 For full documentation of the demo application, see [APP_README.md](APP_README.md).
 
