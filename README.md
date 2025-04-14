@@ -259,7 +259,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Acknowledgments
 
-- Thanks to <Redacted> for providing the animal dataset and challenge structure
+- Thanks to [Redacted] for providing the animal dataset
 - Implementation based on insights from the original I-JEPA paper
 
 
