@@ -24,7 +24,7 @@ st.set_page_config(
 MODEL_PATH = "inference/animal-ijepa_model.pth"
 IMAGE_SIZE = 224
 EMBED_DIM = 768
-DATA_DIR = "animal/data" 
+DATA_DIR = "animal/ImageFolder" 
 
 @st.cache_resource
 def load_class_names():
