@@ -20,10 +20,10 @@ st.set_page_config(
 )
 
 # Define constants
-MODEL_PATH = "/ijepa_ssl/experiments/ijepa_experiment_V8_submit/ijepa_model.pth"
+MODEL_PATH = "/vol/research/RobotFarming/Projects/ijepa_ssl/experiments/ijepa_experiment_V8_submit/ijepa_model.pth"
 IMAGE_SIZE = 224
 EMBED_DIM = 768
-DATA_DIR = "/animal_ssl/data" 
+DATA_DIR = "/vol/research/RobotFarming/Projects/animal_ssl/challenge5/data" 
 
 
 @st.cache_resource
@@ -302,3 +302,4 @@ def main():
 if __name__ == "__main__":
     main()
     
+    # streamlit run app.py --server.fileWatcherType none
