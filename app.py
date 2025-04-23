@@ -11,6 +11,7 @@ import timm
 from io import BytesIO
 import base64
 import datetime
+from huggingface_hub import hf_hub_download
 
 # Set page config
 st.set_page_config(
@@ -25,6 +26,8 @@ IMAGE_SIZE = 224
 EMBED_DIM = 768
 DATA_DIR = "animal/data" 
 
+if not os.path.exists(MODEL_PATH):
+    MODEL_PATH = hf_hub_download(repo_id="Kleffy/animal-jepa-model", filename="ijepa_model.pth")
 
 @st.cache_resource
 def load_class_names():
