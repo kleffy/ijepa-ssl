@@ -26,9 +26,6 @@ IMAGE_SIZE = 224
 EMBED_DIM = 768
 DATA_DIR = "animal/data" 
 
-if not os.path.exists(MODEL_PATH):
-    MODEL_PATH = hf_hub_download(repo_id="Kleffy/animal-jepa-model", filename="ijepa_model.pth")
-
 @st.cache_resource
 def load_class_names():
     class_names = []
@@ -39,10 +36,27 @@ def load_class_names():
 
 
 @st.cache_resource
+def get_model_path():
+    local_path = MODEL_PATH
+    if not os.path.exists(local_path):
+        st.info("Downloading model from Hugging Face Hub (this may take a minute)...")
+        try:
+            local_path = hf_hub_download(
+                repo_id="Kleffy/animal-jepa-model",
+                filename="ijepa_model.pth"
+            )
+            st.success("Model downloaded successfully!")
+        except Exception as e:
+            st.error(f"Error downloading model: {e}")
+            st.info("Please make sure you have an internet connection.")
+    return local_path
+
+@st.cache_resource
 def load_model():
+    model_path = get_model_path()
     model = timm.create_model('vit_base_patch16_224', pretrained=False, num_classes=0)
     try:
-        state_dict = torch.load(MODEL_PATH, map_location='cpu', weights_only=False)
+        state_dict = torch.load(model_path, map_location='cpu', weights_only=False)
         model.load_state_dict(state_dict)
         model.eval()
         return model
