@@ -21,7 +21,7 @@ st.set_page_config(
 )
 
 # Define constants
-MODEL_PATH = "inference/ijepa_model.pth"
+MODEL_PATH = "inference/animal-ijepa_model.pth"
 IMAGE_SIZE = 224
 EMBED_DIM = 768
 DATA_DIR = "animal/data" 
